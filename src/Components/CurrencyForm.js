@@ -67,16 +67,16 @@ function CurrencyForm() {
 					</h2>
 				</div>
 				<div>
-					<select onChange={grabFirstSymbol}>{currencyList1}</select>
+					<select id="select" onChange={grabFirstSymbol}>{currencyList1}</select>
 				</div>
 
 				<h2 id='data'>equals</h2>
 
-				<select onChange={grabSecondSymbol}>{currencyList2}</select>
+				<select id = "select" onChange={grabSecondSymbol}>{currencyList2}</select>
 				<div>
 					{' '}
 					<br />
-					<button onClick={getOdds}>get odds</button> &nbsp;
+					<button id = "button-24"onClick={getOdds}>get odds</button> &nbsp;
 				</div>
 				<div>
 					<h2 id='data'>

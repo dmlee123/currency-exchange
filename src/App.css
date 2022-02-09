@@ -44,16 +44,65 @@ html {
 
 #root > div > div > h2 {
 	font-family: 'Markazi Text', serif;
-	font-size: 60px;
+	font-size: 70px;
 }
 
 #data {
 	font-family: 'Halant', serif;
-  font-size: 30px;
-  
+	font-size: 30px;
 }
 
+#data > strong {
+	font-size: 45px;
+	color: #a91a1a;
+}
 
-#data > strong{
-  font-size: 40px;
+#button-24 {
+	background: #539987;
+	border: 1px solid #539987;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: nunito, roboto, proxima-nova, 'proxima nova', sans-serif;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 16px;
+	min-height: 40px;
+	outline: 0;
+	padding: 12px 14px;
+	text-align: center;
+	text-rendering: geometricprecision;
+	text-transform: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+}
+
+#button-24:hover,
+#button-24:active {
+	background-color: initial;
+	background-position: 0 0;
+	color: black;
+}
+
+#button-24:active {
+	opacity: 0.5;
+}
+
+#select {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial',
+		sans-serif;
+	font-size: 18px;
+	color: #60666d;
+	box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+	cursor: pointer;
+	outline: none;
+  opacity: 1;
 }
