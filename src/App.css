@@ -104,5 +104,19 @@ html {
 	box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
 	cursor: pointer;
 	outline: none;
-  opacity: 1;
+	opacity: 1;
+}
+
+#box {
+	border: solid black 1px;
+	width: fit-content;
+	margin: auto;
+	padding: 2rem 3rem;
+	display: inline-block;
+	border: 3px solid #333333;
+	font-size: 2.5rem;
+	border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+	text-transform: uppercase;
+	background: #ffffff;
+	position: relative;
 }

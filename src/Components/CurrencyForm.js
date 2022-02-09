@@ -60,7 +60,7 @@ function CurrencyForm() {
 
 	return (
 		<>
-			<div>
+			<div id = "box">
 				<div id='rate'>
 					<h2 id='data'>
 						<strong>1</strong> {firstSymbol}
