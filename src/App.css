@@ -1,38 +1,59 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+	/* ff 3.6+ */
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(76, 175, 80, 1) 0%,
+		rgba(49, 220, 255, 1) 100%
+	);
+
+	/* safari 5.1+,chrome 10+ */
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(76, 175, 80, 1) 0%,
+		rgba(49, 220, 255, 1) 100%
+	);
+
+	/* opera 11.10+ */
+	background: -o-linear-gradient(
+		90deg,
+		rgba(76, 175, 80, 1) 0%,
+		rgba(49, 220, 255, 1) 100%
+	);
+
+	/* ie 6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31DCFF', endColorstr='#4CAF50', GradientType=0 );
+
+	/* ie 10+ */
+	background: -ms-linear-gradient(
+		90deg,
+		rgba(76, 175, 80, 1) 0%,
+		rgba(49, 220, 255, 1) 100%
+	);
+
+	/* global 94%+ browsers support */
+	background: linear-gradient(
+		90deg,
+		rgba(76, 175, 80, 1) 0%,
+		rgba(49, 220, 255, 1) 100%
+	);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root > div > div > h2 {
+	font-family: 'Markazi Text', serif;
+	font-size: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#data {
+	font-family: 'Halant', serif;
+  font-size: 30px;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#data > strong{
+  font-size: 40px;
 }

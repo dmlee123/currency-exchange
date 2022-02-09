@@ -1,18 +1,21 @@
 import React from 'react';
-import currency from "../list.json"
+import currency from '../list.json';
 import { useState } from 'react';
 
 function CurrencyForm() {
 	const [firstSymbol, setFirstSymbol] = useState(currency[0].currency);
 	const [secondSymbol, setSecondSymbol] = useState(currency[0].currency);
+
 	const [odds, setOdds] = useState();
 
 	const grabFirstSymbol = (data) => {
 		setFirstSymbol(data.target.value);
+		setOdds(null)
 	};
 
 	const grabSecondSymbol = (data) => {
 		setSecondSymbol(data.target.value);
+		setOdds(null)
 	};
 
 	console.log(firstSymbol);
@@ -58,11 +61,27 @@ function CurrencyForm() {
 	return (
 		<>
 			<div>
-				<select onChange={grabFirstSymbol}>{currencyList1}</select>
+				<div id='rate'>
+					<h2 id='data'>
+						<strong>1</strong> {firstSymbol}
+					</h2>
+				</div>
+				<div>
+					<select onChange={grabFirstSymbol}>{currencyList1}</select>
+				</div>
+
+				<h2 id='data'>equals</h2>
+
 				<select onChange={grabSecondSymbol}>{currencyList2}</select>
 				<div>
+					{' '}
+					<br />
 					<button onClick={getOdds}>get odds</button> &nbsp;
-					{odds ? odds : 'input your currencies'}
+				</div>
+				<div>
+					<h2 id='data'>
+						<strong>{odds ? odds : ''}</strong> {odds ? secondSymbol : ''}
+					</h2>
 				</div>
 			</div>
 		</>

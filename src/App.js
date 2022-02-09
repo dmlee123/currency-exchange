@@ -7,7 +7,7 @@ function App() {
   return (
 		<div className='App'>
 			<div className='Dashboard'>
-				<h2>hello</h2>
+				<h2>Currency Exchange Rate</h2>
 				<div>
 					<CurrencyForm />
 				</div>
