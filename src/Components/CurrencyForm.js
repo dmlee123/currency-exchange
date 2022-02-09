@@ -76,7 +76,7 @@ function CurrencyForm() {
 				<div>
 					{' '}
 					<br />
-					<button id = "button-24"onClick={getOdds}>get odds</button> &nbsp;
+					<button id = "button-24"onClick={getOdds}>Get Odds</button> &nbsp;
 				</div>
 				<div>
 					<h2 id='data'>
