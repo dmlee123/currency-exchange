@@ -10,12 +10,12 @@ function CurrencyForm() {
 
 	const grabFirstSymbol = (data) => {
 		setFirstSymbol(data.target.value);
-		setOdds(null)
+		setOdds(null);
 	};
 
 	const grabSecondSymbol = (data) => {
 		setSecondSymbol(data.target.value);
-		setOdds(null)
+		setOdds(null);
 	};
 
 	console.log(firstSymbol);
@@ -36,6 +36,37 @@ function CurrencyForm() {
 			</option>
 		);
 	});
+
+	const date = new Date();
+	const daylist = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday ',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+	const literalDay = daylist[date.getDay()];
+	const monthList = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	];
+	const literalMonth = monthList[date.getMonth()];
+
+	const todaysDate =
+		literalDay + literalMonth + ' ' + date.getDay() + ', ' + date.getFullYear();
+	console.log(todaysDate);
 
 	const getOdds = () => {
 		fetch(
@@ -60,28 +91,35 @@ function CurrencyForm() {
 
 	return (
 		<>
-			<div id = "box">
+			<div id='box'>
 				<div id='rate'>
+					<div>{todaysDate}</div>
+
 					<h2 id='data'>
 						<strong>1</strong> {firstSymbol}
 					</h2>
 				</div>
 				<div>
-					<select id="select" onChange={grabFirstSymbol}>{currencyList1}</select>
+					<select id='select' onChange={grabFirstSymbol}>
+						{currencyList1}
+					</select>
 				</div>
 
 				<h2 id='data'>equals</h2>
 
-				<select id = "select" onChange={grabSecondSymbol}>{currencyList2}</select>
-				<div>
-					{' '}
-					<br />
-					<button id = "button-24"onClick={getOdds}>Get Odds</button> &nbsp;
-				</div>
+				<select id='select' onChange={grabSecondSymbol}>
+					{currencyList2}
+				</select>
 				<div>
 					<h2 id='data'>
 						<strong>{odds ? odds : ''}</strong> {odds ? secondSymbol : ''}
 					</h2>
+				</div>
+				<div>
+					<button id='button-24' onClick={getOdds}>
+						Get Odds
+					</button>{' '}
+					&nbsp;
 				</div>
 			</div>
 		</>
