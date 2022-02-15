@@ -65,7 +65,7 @@ function CurrencyForm() {
 	const literalMonth = monthList[date.getMonth()];
 
 	const todaysDate =
-		literalDay + literalMonth + ' ' + date.getDay() + ', ' + date.getFullYear();
+		literalDay + " " + literalMonth + ' ' + date.getDay() + ', ' + date.getFullYear();
 	console.log(todaysDate);
 
 	const getOdds = () => {
